@@ -15,7 +15,7 @@ jobs:
 
          # caian/arch-texlive:latest && vX.Y.Z
          export latest="$IMAGE_NAME:latest"
-         export tagged="$IMAGE_NAM):$git_tag"
+         export tagged="$IMAGE_NAME:$git_tag"
 
          # log to dockerhub
          echo "$DOCKERHUB_PASSW" | docker login -u caian --password-stdin
