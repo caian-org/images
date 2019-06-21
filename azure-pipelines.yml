@@ -10,16 +10,23 @@ jobs:
       vmImage: 'ubuntu-latest'
     steps:
       - bash: |
+         # get latest tag
          export git_tag="$(git tag | tail -n 1)"
-         export latest="$(image_name):latest"
-         export tagged="$(image_name):$git_tag"
 
+         # caian/arch-texlive:latest && vX.Y.Z
+         export latest="$IMAGE_NAME:latest"
+         export tagged="$IMAGE_NAM):$git_tag"
+
+         # log to dockerhub
          echo "$DOCKERHUB_PASSW" | docker login -u caian --password-stdin
 
+         # build image and push latest
          docker build -t $latest .
          docker push $latest
+
+         # tag from git tag and push
          docker tag $latest $tagged
          docker push $tagged
         env:
           IMAGE_NAME: caian/arch-textlive
-          DOCKERHUB_PASSW: $(docker.password)
+          DOCKERHUB_PASSW: $(dockerhub.password)
