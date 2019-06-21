@@ -1,4 +1,5 @@
 FROM archlinux/base:latest
+MAINTAINER Caian R. Ertl <hi@caian.org>
 
 RUN pacman -Syyu --noconfirm
 RUN pacman -S --noconfirm base-devel git
