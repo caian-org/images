@@ -28,5 +28,5 @@ jobs:
          docker tag $latest $tagged
          docker push $tagged
         env:
-          IMAGE_NAME: caian/arch-textlive
+          IMAGE_NAME: caian/arch-texlive
           DOCKERHUB_PASSW: $(dockerhub.password)
