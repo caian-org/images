@@ -4,21 +4,22 @@ trigger:
       - v*
 
 
-variables:
-  image_name: caian/arch-texlive
-
-
 jobs:
   - job: Push
     pool:
       vmImage: 'ubuntu-latest'
     steps:
-      - script: |
-        export git_tag="$(git tag | tail -n 1)"
-        export latest="$(image_name):latest"
-        export tagged="$(image_name):$git_tag"
-        echo "$DOCKERHUB_PASSW" | docker login -u caian --password-stdin
-        docker build -t $latest .
-        docker push $latest
-        docker tag $latest $tagged
-        docker push $tagged
+      - bash: |
+         export git_tag="$(git tag | tail -n 1)"
+         export latest="$(image_name):latest"
+         export tagged="$(image_name):$git_tag"
+
+         echo "$DOCKERHUB_PASSW" | docker login -u caian --password-stdin
+
+         docker build -t $latest .
+         docker push $latest
+         docker tag $latest $tagged
+         docker push $tagged
+        env:
+          IMAGE_NAME: caian/arch-textlive
+          DOCKERHUB_PASSW: $(docker.password)
