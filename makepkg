@@ -1410,7 +1410,7 @@ if (( LOGGING )) && ! ensure_writable_dir "LOGDEST" "$LOGDEST"; then
 fi
 
 if (( ! INFAKEROOT )); then
-    printf "\n\n%s\n\n" "!!!!! FUCK YOU IM GONNA DO WHATEVER !!!!!"
+	printf "\n\n%s\n\n" "!!!!! FUCK YOU IM GONNA DO WHATEVER !!!!!"
 else
 	if [[ -z $FAKEROOTKEY ]]; then
 		error "$(gettext "Do not use the %s option. This option is only for internal use by %s.")" "'-F'" "makepkg"
