@@ -2,14 +2,22 @@ FROM archlinux/base:latest
 MAINTAINER Caian R. Ertl <hi@caian.org>
 
 RUN pacman -Syyu --noconfirm
-RUN pacman -S --noconfirm base-devel git
+RUN pacman -S --noconfirm base-devel git sudo
 
-RUN rm /usr/bin/makepkg
-COPY makepkg /usr/bin
+RUN groupadd sudo
 
-RUN pacman -S --noconfirm texlive-most texlive-lang
+RUN useradd alan
+RUN usermod -a -G sudo alan
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
-RUN pacman -S --noconfirm ttf-lato
-RUN git clone https://aur.archlinux.org/ttf-merriweather.git
-RUN cd ttf-merriweather && makepkg -si --noconfirm
-RUN rm -rf ttf-merriweather
+RUN mkdir -p /home/alan
+RUN chown alan:alan /home/alan
+
+USER alan
+WORKDIR /home/alan
+
+RUN git clone https://aur.archlinux.org/yay.git
+RUN ls -lash
+RUN cd yay && makepkg -si --noconfirm
+
+RUN yay -S --noconfirm nerd-fonts-complete texlive-most texlive-lang
