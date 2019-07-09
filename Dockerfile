@@ -20,4 +20,4 @@ RUN git clone https://aur.archlinux.org/yay.git
 RUN ls -lash
 RUN cd yay && makepkg -si --noconfirm
 
-RUN yay -S --noconfirm nerd-fonts-complete texlive-most texlive-lang
+RUN yay -S --noconfirm ttf-google-fonts-git adobe-source-pro-fonts texlive-most texlive-lang
