@@ -7,11 +7,11 @@ your own peril.
 
 [![Build Status][azure-shield]][azure-url] [![GitHub tag][tag-shield]][tag-url]
 
-- __Arch-based.__ Always using the latest version of LaTeX (don't forget to rebuild).
+- __Arch-based.__ Always use the latest version of LaTeX (don't forget to rebuild).
 - __Fonts included.__ Every Google font available.
 - __CI/CD friendly.__ In case you're insane like me and want to compile
     documents inside a continuous integration pipeline.
-- __Gigantic.__ OMEGABLOATED! Somewhat around 4 GB on a single image.
+- __Gigantic.__ OMEGABLOATED, somewhat around 4 GB on a single image.
 
 [azure-shield]:https://img.shields.io/azure-devops/build/caiertl/baf18f7b-5853-4d01-997f-c923ec17b6d2/2?style=for-the-badge
 [azure-url]:https://dev.azure.com/caiertl/arch-texlive
