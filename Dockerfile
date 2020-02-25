@@ -17,7 +17,6 @@ USER alan
 WORKDIR /home/alan
 
 RUN git clone https://aur.archlinux.org/yay.git
-RUN ls -lash
 RUN cd yay && makepkg -si --noconfirm
 
 RUN yay -S --noconfirm ttf-google-fonts-git texlive-most texlive-lang
