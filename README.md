@@ -13,8 +13,8 @@ your own peril.
     documents inside a continuous integration pipeline.
 - __Gigantic.__ OMEGABLOATED, somewhat around 4 GB on a single image.
 
-[azure-shield]:https://img.shields.io/azure-devops/build/caiertl/baf18f7b-5853-4d01-997f-c923ec17b6d2/2?style=for-the-badge
-[azure-url]:https://dev.azure.com/caiertl/arch-texlive
+[azure-shield]:https://img.shields.io/azure-devops/build/caian-org/baf18f7b-5853-4d01-997f-c923ec17b6d2/2?style=for-the-badge
+[azure-url]:https://dev.azure.com/caian-org/arch-texlive
 
 [tag-shield]: https://img.shields.io/github/tag/caian-org/arch-texlive.svg?style=for-the-badge
 [tag-url]: https://github.com/caian-org/arch-texlive/releases
