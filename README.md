@@ -3,7 +3,7 @@
 
 # arch-texlive
 
-<img src="new-01.svg" height="210px" align="right"/>
+<img src="icon.svg" height="210px" align="right"/>
 
 Ready-to-use docker image of a full LaTeX installation on top of arch.
 
