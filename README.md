@@ -1,8 +1,9 @@
-[![Build Status][azure-shield]][azure-url] [![GitHub tag][tag-shield]][tag-url]
+[![Build Status][azure-shield]][azure-url]
+[![GitHub tag][tag-shield]][tag-url]
 
 # arch-texlive
 
-<img src="logo.svg" height="210px" align="right"/>
+<img src="new-01.svg" height="210px" align="right"/>
 
 Ready-to-use docker image of a full LaTeX installation on top of arch.
 
@@ -17,16 +18,6 @@ Ready-to-use docker image of a full LaTeX installation on top of arch.
 
 [tag-shield]: https://img.shields.io/github/tag/caian-org/arch-texlive.svg?style=flat-square
 [tag-url]: https://github.com/caian-org/arch-texlive/releases
-
-
-## Acknowledgements
-
-Icons made by [Eucalyp][eucalyp] from [Flaticon][flaticon] is
-licensed by [CC 3.0 BY][cc3].
-
-[eucalyp]: https://www.flaticon.com/authors/eucalyp
-[flaticon]: https://www.flaticon.com
-[cc3]: http://creativecommons.org/licenses/by/3.0
 
 
 ## License
