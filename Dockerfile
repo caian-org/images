@@ -1,5 +1,5 @@
-FROM archlinux/base:latest
-MAINTAINER Caian R. Ertl <hi@caian.org>
+FROM archlinux:base
+MAINTAINER Caian Ertl <hi@caian.org>
 
 RUN pacman -Syyu --noconfirm && \
     pacman -S --noconfirm base-devel git sudo && \
