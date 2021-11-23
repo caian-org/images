@@ -1,5 +1,5 @@
-[![Build Status][azure-shield]][azure-url]
-[![GitHub tag][tag-shield]][tag-url]
+[![Build][build-shield]][build-url]
+[![Tag][tag-shield]][tag-url]
 
 # arch-texlive
 
@@ -13,8 +13,8 @@ Ready-to-use docker image of a full LaTeX installation on top of arch.
     documents inside a continuous integration pipeline.
 - __Gigantic.__ OMEGABLOATED, somewhat around 4 GB on a single image.
 
-[azure-shield]: https://img.shields.io/azure-devops/build/caian-org/74f159e4-7769-4754-b4d4-4a22ec574a7d/10?logo=azure-pipelines&style=flat-square
-[azure-url]: https://dev.azure.com/caian-org/arch-texlive/_build
+[build-shield]: https://img.shields.io/github/workflow/status/caian-org/arch-texlive/build-docker-image-and-push-to-hub?label=build&logo=github&style=flat-square
+[build-url]: https://github.com/caian-org/arch-texlive/actions/workflows/build-and-push-docker.yml
 
 [tag-shield]: https://img.shields.io/github/tag/caian-org/arch-texlive.svg?style=flat-square
 [tag-url]: https://github.com/caian-org/arch-texlive/releases
