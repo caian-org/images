@@ -3,20 +3,20 @@
 
 # arch-texlive
 
-<img src="icon.svg" height="210px" align="right"/>
+<img src="logo.svg" height="240px" align="right"/>
 
 Ready-to-use docker image of a full LaTeX installation on top of arch.
 
-- __Arch-based.__ Always use the latest version of LaTeX (don't forget to rebuild).
+- __Arch-based.__ Always use the latest version of LaTeX.
 - __Fonts included.__ Every Google font available.
 - __CI/CD friendly.__ In case you're insane like me and want to compile
     documents inside a continuous integration pipeline.
-- __Gigantic.__ OMEGABLOATED, somewhat around 4 GB on a single image.
+- __Gigantic.__ OMEGABLOATED, somewhat around 6 GB on a single image.
 
-[build-shield]: https://img.shields.io/github/workflow/status/caian-org/arch-texlive/build-docker-image-and-push-to-hub?label=build&logo=github&style=flat-square
+[build-shield]: https://img.shields.io/github/workflow/status/caian-org/arch-texlive/build-docker-image-and-push-to-hub?label=build&logo=github&style=for-the-badge
 [build-url]: https://github.com/caian-org/arch-texlive/actions/workflows/build-and-push-docker.yml
 
-[tag-shield]: https://img.shields.io/github/tag/caian-org/arch-texlive.svg?style=flat-square
+[tag-shield]: https://img.shields.io/github/tag/caian-org/arch-texlive.svg?style=for-the-badge
 [tag-url]: https://github.com/caian-org/arch-texlive/releases
 
 
