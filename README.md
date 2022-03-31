@@ -10,15 +10,17 @@ Ready-to-use docker image of a full LaTeX installation on top of arch.
 
 - __Arch-based.__ Always use the latest version of LaTeX.
 - __Fonts included.__ Every Google font available.
+- __Gigantic.__ OMEGABLOATED, somewhat around 7 GB on a single image.
 - __CI/CD friendly.__ In case you're insane like me and want to compile
     documents inside a continuous integration pipeline.
-- __Gigantic.__ OMEGABLOATED, somewhat around 6 GB on a single image.
+
+You can see this image in action [here](https://github.com/caian-org/cv).
 
 [build-shield]: https://img.shields.io/github/workflow/status/caian-org/arch-texlive/build-docker-image-and-push-to-hub?label=build&logo=github&style=for-the-badge
 [build-url]: https://github.com/caian-org/arch-texlive/actions/workflows/build-and-push-docker.yml
 
 [tag-shield]: https://img.shields.io/github/tag/caian-org/arch-texlive.svg?logo=git&logoColor=FFF&style=for-the-badge
-[tag-url]: https://github.com/caian-org/arch-texlive/releases
+[tag-url]: https://github.com/caian-org/arch-texlive/tags
 
 [img-size-shield]: https://img.shields.io/docker/image-size/caian/arch-texlive?logo=docker&logoColor=FFF&style=for-the-badge
 [docker-url]: https://hub.docker.com/r/caian/arch-texlive
