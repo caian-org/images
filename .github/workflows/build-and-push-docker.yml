@@ -1,9 +1,13 @@
 name: build-docker-image-and-push-to-hub
 
 on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '0 6 * * 0'
+
   push:
-    tags:
-      - 'v*'
+    tags: 'v*'
 
 jobs:
   build-and-push-docker:
@@ -26,8 +30,9 @@ jobs:
       - name: Build and push image
         run: |
           export GIT_TAG="$(git tag | tail -n 1)"
-          export IMAGE_LATEST="$IMAGE_NAME:latest"
-          export IMAGE_TAGGED="$IMAGE_NAME:$GIT_TAG"
+          export IMAGE_LATEST="${IMAGE_NAME}:latest"
+          export IMAGE_TAGGED="${IMAGE_NAME}:${GIT_TAG}"
+
           docker build -t "$IMAGE_LATEST" .
           docker push "$IMAGE_LATEST"
           docker tag "$IMAGE_LATEST" "$IMAGE_TAGGED"
