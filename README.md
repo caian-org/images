@@ -1,5 +1,6 @@
 [![Build][build-shield]][build-url]
-[![Tag][tag-shield]][tag-url]
+[![Git Tag][tag-shield]][tag-url]
+[![Docker Image Size][img-size-shield]][docker-url]
 
 # arch-texlive
 
@@ -16,8 +17,11 @@ Ready-to-use docker image of a full LaTeX installation on top of arch.
 [build-shield]: https://img.shields.io/github/workflow/status/caian-org/arch-texlive/build-docker-image-and-push-to-hub?label=build&logo=github&style=for-the-badge
 [build-url]: https://github.com/caian-org/arch-texlive/actions/workflows/build-and-push-docker.yml
 
-[tag-shield]: https://img.shields.io/github/tag/caian-org/arch-texlive.svg?style=for-the-badge
+[tag-shield]: https://img.shields.io/github/tag/caian-org/arch-texlive.svg?logo=git&logoColor=FFF&style=for-the-badge
 [tag-url]: https://github.com/caian-org/arch-texlive/releases
+
+[img-size-shield]: https://img.shields.io/docker/image-size/caian/arch-texlive?logo=docker&logoColor=FFF&style=for-the-badge
+[docker-url]: https://hub.docker.com/r/caian/arch-texlive
 
 
 ## License
