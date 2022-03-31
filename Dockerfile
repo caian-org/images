@@ -1,18 +1,20 @@
 FROM archlinux:base
-MAINTAINER Caian Ertl <hi@caian.org>
+LABEL maintainer="Caian Ertl <hi@caian.org>"
 
-RUN pacman -Syyu --noconfirm && \
-    pacman -S --noconfirm base-devel git sudo && \
-    groupadd sudo && \
-    useradd alan && \
-    usermod -a -G sudo alan && \
-    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
-    mkdir -p /home/alan && \
-    chown alan:alan /home/alan
+RUN pacman -Syyu --noconfirm \
+    && pacman -S --noconfirm base-devel git sudo \
+    && groupadd sudo \
+    && useradd turing \
+    && usermod -a -G sudo turing \
+    && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
+    && mkdir -p /home/turing \
+    && chown turing:turing /home/turing
 
-USER alan
-WORKDIR /home/alan
-
-RUN git clone https://aur.archlinux.org/yay.git && \
-    cd yay && makepkg -si --noconfirm && \
-    yay -S --noconfirm ttf-google-fonts-git texlive-most
+USER turing
+WORKDIR /home/turing
+RUN git clone https://aur.archlinux.org/yay.git \
+    && cd yay \
+    && makepkg -si --noconfirm \
+    && yay -S --noconfirm ttf-google-fonts-git texlive-most \
+    && cd .. \
+    && rm -rf yay
