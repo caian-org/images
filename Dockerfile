@@ -17,4 +17,5 @@ RUN git clone https://aur.archlinux.org/yay.git \
     && makepkg -si --noconfirm \
     && yay -S --noconfirm ttf-google-fonts-git texlive-most \
     && cd .. \
-    && rm -rf yay
+    && rm -rf yay \
+    && sudo luaotfload-tool --update
