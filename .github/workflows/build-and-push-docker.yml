@@ -34,6 +34,6 @@ jobs:
           export IMAGE_TAGGED="${IMAGE_NAME}:${GIT_TAG}"
 
           docker build -t "$IMAGE_LATEST" .
+          docker build -t "$IMAGE_TAGGED" .
           docker push "$IMAGE_LATEST"
-          docker tag "$IMAGE_LATEST" "$IMAGE_TAGGED"
           docker push "$IMAGE_TAGGED"
