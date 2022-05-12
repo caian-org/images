@@ -16,8 +16,8 @@ Ready-to-use docker image of a full LaTeX installation on top of arch.
 
 You can see this image in action [here](https://github.com/caian-org/cv).
 
-[build-shield]: https://img.shields.io/github/workflow/status/caian-org/arch-texlive/build-docker-image-and-push-to-hub?label=build&logo=github&style=for-the-badge
-[build-url]: https://github.com/caian-org/arch-texlive/actions/workflows/build-and-push-docker.yml
+[build-shield]: https://img.shields.io/github/workflow/status/caian-org/arch-texlive/build-latest?label=edge%20build&logo=github&style=for-the-badge
+[build-url]: https://github.com/caian-org/arch-texlive/actions/workflows/build-latest.yml
 
 [tag-shield]: https://img.shields.io/github/tag/caian-org/arch-texlive.svg?logo=git&logoColor=FFF&style=for-the-badge
 [tag-url]: https://github.com/caian-org/arch-texlive/tags
