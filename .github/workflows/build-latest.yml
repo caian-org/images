@@ -6,8 +6,8 @@ on:
     - cron: '0 6 * * 0'
 
   push:
-    branches:
-      - edge
+    paths-ignore: '**.md'
+    branches: edge
 
   workflow_dispatch:
 
