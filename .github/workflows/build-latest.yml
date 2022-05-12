@@ -7,13 +7,13 @@ on:
 
   push:
     branches:
-      - master
+      - edge
 
   workflow_dispatch:
 
 
 jobs:
-  build-on-tag:
+  build-latest:
     runs-on: ubuntu-latest
     env:
       image-name: caian/arch-texlive
@@ -21,6 +21,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
 
       - name: Build and push on latest
         uses: ./.github/actions/build-and-push
