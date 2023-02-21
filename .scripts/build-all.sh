@@ -4,7 +4,7 @@ source ./.scripts/shared.sh
 
 FALLBACK_TAG="vX.P.T.O"
 
-DOCKER_ACC_USERNAME="mzgroup"
+DOCKER_ACC_USERNAME="caian"
 HERE=$(pwd)
 
 
