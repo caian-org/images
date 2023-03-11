@@ -1,5 +1,4 @@
-FROM gitpod/workspace-full:2023-01-16-03-31-28@sha256:d5787229cd062aceae91109f1690013d3f25062916492fb7f444d13de3186178 AS base
-
+FROM mzgroup/gitpod-workspace:2023.03.07-2@sha256:7ab84de514f008a8c206c3b53792a531591175dc9e7109d1e7e8011776195d6b AS base
 
 # ===================================================================
 FROM base AS packages
@@ -7,49 +6,23 @@ USER root
 RUN apt-get update \
     && apt-get upgrade --yes \
     && apt-get install --yes --no-install-recommends \
-        "neovim=0.4.3*" \
         "gcc-arm-none-eabi" \
         "gcc-arm-none-eabi" \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 USER gitpod
-RUN brew link cmake \
-    && brew update \
+RUN brew update \
     && brew upgrade \
     && brew install \
-        terraform \
-        terraform-docs \
-        terragrunt \
-        infracost \
-        shellcheck \
-        hadolint \
-        awscli \
-        fd \
-        bat \
-        exa \
-        mongosh \
-        dive \
         cmake \
         llvm \
         upx \
-        itchyny/tap/mmv
+    && brew cleanup \
+    && brew autoremove
 
 
 # ===================================================================
-FROM packages AS altvers
-USER gitpod
-SHELL ["/usr/bin/bash", "-c"]
-
-# hadolint ignore=SC1091
-RUN source "$HOME/.nvm/nvm-lazy.sh" \
-    && nvm install 18 \
-    && nvm install 19 \
-    && pyenv install 3.10 \
-    && pyenv install 3.11
-
-
-# ===================================================================
-FROM altvers AS runtime
+FROM packages AS runtime
 ENV DOCKER_BUILDKIT=1
 WORKDIR /home/gitpod
